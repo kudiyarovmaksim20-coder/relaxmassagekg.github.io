@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f3ee;
+    color: #2f2a26;
+}
+
+/* Шапка */
+
+header {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fffaf5;
+    border-bottom: 1px solid #e8ded3;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2f2a26;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #9b7653;
+}
+
+/* Главный экран */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 8%;
+    background: #f7f3ee;
+}
+
+.hero-content {
+    width: 50%;
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #9b7653;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #665d56;
+    margin-bottom: 35px;
+    max-width: 550px;
+}
+
+.button,
+.contact-button {
+    display: inline-block;
+    padding: 16px 30px;
+    background: #9b7653;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover,
+.contact-button:hover {
+    background: #795a3e;
+    transform: translateY(-2px);
+}
+
+/* Секции */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section h2,
+.booking h2,
+.contacts h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/* Услуги */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #eadfd5;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #70675f;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.service-card strong {
+    color: #9b7653;
+    font-size: 20px;
+}
+
+/* Преимущества */
+
+.about {
+    background: #fffaf5;
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.advantages div {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 12px;
+    font-size: 17px;
+}
+
+/* Запись */
+
+.booking {
+    padding: 90px 8%;
+    text-align: center;
+    background: #eee5dc;
+}
+
+.booking p {
+    margin-bottom: 30px;
+    color: #665d56;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select {
+    padding: 16px;
+    border: 1px solid #d8cabe;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+button {
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #9b7653;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #795a3e;
+}
+
+/* Контакты */
+
+.contacts {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.contacts p {
+    margin: 12px;
+    font-size: 18px;
+}
+
+/* Подвал */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #2f2a26;
+    color: white;
+}
+
+/* Телефон */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 60px 5%;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section h2,
+    .booking h2,
+    .contacts h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+}
+.hero-image {
+    width: 430px;
+    height: 560px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
